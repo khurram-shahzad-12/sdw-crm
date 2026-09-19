@@ -1,6 +1,73 @@
-version: "3.8"
+# version: "3.8"
+
+# services:
+#   frontend:
+#     build:
+#       context: ./app/client
+#     expose:
+#       - "80"
+#     restart: always
+#     depends_on:
+#       - backend
+#     networks:
+#       - sdw-crm-network
+
+#   backend:
+#     build:
+#       context: ./app/server
+#     env_file:
+#       - ./app/server/.env
+#     expose:
+#       - "8000"
+#     restart: always
+#     depends_on:
+#       - mongodb
+#     networks:
+#       - sdw-crm-network
+
+#   mongodb:
+#     image: mongo:8
+#     container_name: sdw-crm-mongodb
+#     restart: always
+#     ports:
+#       - "27017:27017"
+#     volumes:
+#       - mongo_data:/data/db
+#     networks:
+#       - sdw-crm-network
+#   nginx:
+#     image: nginx:latest
+#     container_name: sdw-crm-nginx
+#     ports:
+#       - "80:80"
+#       - "443:443"
+#     volumes:
+#       - ./nginx/conf.d:/etc/nginx/conf.d
+#       - /etc/letsencrypt:/etc/letsencrypt
+#       - ./certbot:/var/www/certbot
+#     restart: always
+#     depends_on:
+#       - frontend
+#       - backend
+#     networks:
+#       - sdw-crm-network
+
+# networks:
+#   sdw-crm-network:
+
+# volumes:
+#   mongo_data:
+
+
+
+
+
+
+
+# localhostonly
 
 services:
+
   frontend:
     build:
       context: ./app/client
@@ -17,9 +84,22 @@ services:
       context: ./app/server
     env_file:
       - ./app/server/.env
-    expose:
-      - "8000"
+    ports:
+      - "8000:8000"
     restart: always
+    depends_on:
+      - mongodb
+    networks:
+      - sdw-crm-network
+
+  mongodb:
+    image: mongo:8
+    container_name: sdw-crm-mongodb
+    restart: always
+    # ports:
+    #   - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
     networks:
       - sdw-crm-network
 
@@ -43,51 +123,8 @@ services:
 networks:
   sdw-crm-network:
 
-
-
-
-
-
-
-# localhostonly
-
-# version: "3.8"
-# services:
-#     frontend:
-#         build:
-#             context: ./app/client
-#         ports:
-#             - "3000:80"
-#         restart: always
-#         depends_on:
-#             - backend
-#     backend:
-#         build:
-#             context: ./app/server
-#         env_file:
-#             - ./app/server/.env
-#         ports:
-#             - "8000:8000"
-#         restart: always
-#         depends_on:
-#             - routeplanner
-#     routeplanner:
-#         build:
-#             context: ./routeplanner
-#         ports:
-#             - "5000:5000"
-#         restart: always
-#         depends_on:
-#             - osrm
-#     osrm:
-#         image: osrm/osrm-backend
-#         container_name: crm-copy-osrm
-#         ports:
-#             - "6000:5000"
-#         volumes:
-#             - ./osrm-data:/data
-#         command: osrm-routed --algorithm mld /data/uk-latest.osrm
-#         restart: always
+volumes:
+  mongo_data:
 
 
 

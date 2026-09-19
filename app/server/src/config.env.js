@@ -117,7 +117,7 @@ const CSP_IMG_SRC = ['https://s.gravatar.com/', 'https://i1.wp.com/'];
 
 // [MongoDB]
 // const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/spice_direct';
-const MONGO_URL = process.env.MONGO_URL;
+const MONGO_URL = 'mongodb://mongodb:27017/spice_direct';
 const MONGO_AUTH_DB = process.env.MONGO_AUTH_DB || 'admin';
 const {MONGO_USER, MONGO_PASS} = process.env;
 
