@@ -128,7 +128,13 @@ const Login = () => {
                 sx={{
                   mb: 2.5, '& .MuiOutlinedInput-root': {
                     borderRadius: 2, transition: 'all 0.2s',
-                    '&:hover': { boxShadow: '0 0 0 2px rgba(102, 126, 234, 0.1)' }
+                    '&:hover': { boxShadow: '0 0 0 2px rgba(102, 126, 234, 0.1)' },
+                    '& input:-webkit-autofill, & input:-webkit-autofill:hover, & input:-webkit-autofill:focus': {
+                      WebkitBoxShadow: '0 0 0 1000px transparent inset',
+                      WebkitTextFillColor: '#ffffff',
+                      caretColor: '#ffffff',
+                      transition: 'background-color 9999s ease-out 0s',
+                    },
                   }
                 }}
               />
@@ -160,7 +166,13 @@ const Login = () => {
                   mb: 3.5,
                   '& .MuiOutlinedInput-root': {
                     borderRadius: 2, transition: 'all 0.2s',
-                    '&:hover': { boxShadow: '0 0 0 2px rgba(102, 126, 234, 0.1)' }
+                    '&:hover': { boxShadow: '0 0 0 2px rgba(102, 126, 234, 0.1)' },
+                    '& input:-webkit-autofill, & input:-webkit-autofill:hover, & input:-webkit-autofill:focus': {
+                      WebkitBoxShadow: '0 0 0 1000px transparent inset',
+                      WebkitTextFillColor: '#ffffff',
+                      caretColor: '#ffffff',
+                      transition: 'background-color 9999s ease-out 0s',
+                    },
                   }
                 }} />
               <Button
