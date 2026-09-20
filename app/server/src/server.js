@@ -36,7 +36,7 @@ const userSockets = new Map();
 const app = express();
 let io;
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://localhost:8000', 'http://localhost'],
+  origin: ['http://localhost:3000', 'https://localhost:8000', 'http://localhost', 'http://staff.sdw-ds.com','https://staff.sdw-ds.com'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
