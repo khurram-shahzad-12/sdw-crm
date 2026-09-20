@@ -48,7 +48,6 @@ const startupCallback = () => {
     process.stdout.write(`TLS: ${env.useTLS}\n`);
     process.stdout.write(`Helmet: ${env.useHELMET}\n`);
     process.stdout.write(`CORS: ${env.useCORS}\n`);
-    // process.stdout.write(`Auth0: ${env.useAUTH0}\n`);
     process.stdout.write(`Emails Enabled: ${env.EMAIL_ENABLED}\n`);
     process.stdout.write(`Allowed content-src: ${env.CONTENT_SRC_ALLOWED}\n`);
     connectDB();
@@ -123,7 +122,7 @@ if (env.useHELMET) {
     app.use(
         helmet.contentSecurityPolicy({
             directives: {
-                'default-src': ['\'self\'', ...env.CSP_DEFAULT_SRC],
+                'default-src': ['\'self\''],
                 'img-src': ['\'self\'', 'data:','https://maps.gstatic.com','https://maps.googleapis.com','https://s.gravatar.com','https://cdn.jsdelivr.net' ,...env.CSP_IMG_SRC],
                 'script-src': ['\'self\'',
                     'https://maps.googleapis.com', 'https://maps.gstatic.com', "'unsafe-inline'"

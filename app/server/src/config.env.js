@@ -33,9 +33,6 @@ const useCORS = parseBoolean(process.env.CORS, true);
 const LOG_LEVEL = process.env.LOG_LEVEL || 'dev';
 
 // [Auth0]
-const useAUTH0 = parseBoolean(process.env.AUTH0);
-const TOKEN_ISSUER = process.env.TOKEN_ISSUER || 'https://development-spice-direct.eu.auth0.com/';
-const TOKEN_AUDIENCE = process.env.TOKEN_AUDIENCE || `${DOMAIN}:${PORT}/api/`;
 const CLAIM_NAME = process.env.CLAIM_NAME || 'https://spicedirect/roles';
 const READ_ZONES_CLAIM= process.env.READ_ZONES_CLAIM || 'read:zones';
 const WRITE_ZONES_CLAIM= process.env.WRITE_ZONES_CLAIM || 'write:zones';
@@ -112,7 +109,6 @@ const REACT_APP_READ_CREDIT_NOTES_CLAIM=process.env.REACT_APP_READ_CREDIT_NOTES_
 
 // [Helmet]
 const useHELMET = parseBoolean(process.env.HELMET);
-const CSP_DEFAULT_SRC = [TOKEN_ISSUER];
 const CSP_IMG_SRC = ['https://s.gravatar.com/', 'https://i1.wp.com/'];
 
 // [MongoDB]
@@ -158,8 +154,6 @@ module.exports = {
     LOG_LEVEL,
 
     useAUTH0,
-    TOKEN_ISSUER,
-    TOKEN_AUDIENCE,
     CLAIM_NAME,
     READ_ZONES_CLAIM,
     WRITE_ZONES_CLAIM,
@@ -226,7 +220,6 @@ module.exports = {
     REACT_APP_READ_CREDIT_NOTES_CLAIM,
 
     useHELMET,
-    CSP_DEFAULT_SRC,
     CSP_IMG_SRC,
 
     MONGO_URL,
