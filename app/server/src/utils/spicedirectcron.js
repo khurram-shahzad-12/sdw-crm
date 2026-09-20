@@ -87,7 +87,7 @@ const getOrdersFromSpiceDirectApp = cron.schedule('*/5 * * * *', async () => {
         }
         } else { console.log('cannot fetch order from spicedirect app in development server'); return; };
     } catch (error) {
-        console.error('Error fetching orders from spice direct Mobile App:', error)
+        console.error('Error fetching orders from sdw system App:', error)
     }
 });
 

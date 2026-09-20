@@ -331,7 +331,7 @@ const NavBar = (props) => {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-                    SPICE DIRECT LTD
+                    SDW DS SYSTEM
                 </Typography>
                 {/*<span style={{marginRight: "2em"}}>{state}({remaining})</span>*/}
                 <SettingsIcon onClick={() => setSettingsOpen(true)} style={{ marginRight: "2em" }} />
@@ -359,21 +359,21 @@ const NavBar = (props) => {
             open={drawerOpen}
         >
             <DrawerHeader style={logoDivStyles}>
-                <img src={process.env.REACT_APP_TYPE === "development" ? testLogo : logo} style={{ width: "100%", height: "100%" }} alt="Spice Direct Logo" />
+                <img src={process.env.REACT_APP_TYPE === "development" ? testLogo : testLogo} style={{ width: "100%", height: "100%" }} alt="SDW Logo" />
                 <IconButton onClick={handleDrawerClose}>
                     {drawerOpen ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                 </IconButton>
             </DrawerHeader>
             <Divider />
             <Profile/>
-            {
+            {/* {
                 process.env.REACT_APP_TYPE === "development" ?
                     <div style={{ background: "red", textAlign: "center" }}>
                         <h3>TESTING</h3>
                     </div>
                     :
                     <></>
-            }
+            } */}
             <Divider />
             {isAuthenticated ?
                 <div>

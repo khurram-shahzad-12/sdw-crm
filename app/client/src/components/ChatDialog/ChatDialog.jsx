@@ -80,7 +80,7 @@ const ChatDialog = ({
             sx={{ '& .MuiDialog-paper': { height: '80vh' } }}
         >
             <DialogTitle>
-                {process.env.REACT_APP_TYPE === "development" ? 'SDW Chat':'Spice Direct Wholesale Chat'}
+                {process.env.REACT_APP_TYPE === "development" ? 'SDW Chat':'SDW Chat'}
             </DialogTitle>
             <DialogContent sx={{ p: 0, display: 'flex', height: '100%', flexDirection: 'column' }}>
                 <Box sx={{ display: 'flex', height: '100%', overflow: 'hidden' }}>
