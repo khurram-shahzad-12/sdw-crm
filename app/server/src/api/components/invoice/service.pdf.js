@@ -919,7 +919,7 @@ const generateCustomerStatementPDF = async (invoiceIDList) => {
                     {image: currentConfig.logo, width: 120, height: 65},{text: "\n"},
                     [{text: `Date: ${DATE.format(momentFormat)}`,decoration:"underline", bold:true}],{text: "\n"},
                     [{text: "Our Bank Details",fontSize:12, bold:true,decoration:"underline"}],
-                    [{text: "Account Name: SDW DS SYSTEM LTD"}],
+                    [{text: "Account Name: SDW"}],
                     // [{text: "Account Number: 30845944"}],
                     [{text: "Sort Code: 04-00-03"}],
                     ]

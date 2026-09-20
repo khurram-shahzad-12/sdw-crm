@@ -93,7 +93,7 @@ const Login = () => {
                   background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                   WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-0.5px'
                 }} >
-                SDW DS SYSTEM
+                SDW
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mt: 1, fontWeight: 500 }} >
                 Sign in to your account
@@ -203,7 +203,7 @@ const Login = () => {
                 <Typography variant="caption" color="text.secondary"> Secure Login </Typography>
               </Divider>
               <Stack direction="row" justifyContent="center" spacing={1} sx={{ mt: 1 }} >
-                <Typography variant="caption" color="text.secondary"> © {new Date().getFullYear()} SDW DS SYSTEM </Typography>
+                <Typography variant="caption" color="text.secondary"> © {new Date().getFullYear()} SDW </Typography>
               </Stack>
             </form>
           </Paper>

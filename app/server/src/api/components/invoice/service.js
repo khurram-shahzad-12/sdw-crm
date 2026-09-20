@@ -309,7 +309,7 @@ const getInvoiceEmailBody = addressee => {
         <div style="background-color: #f4f4f3; width: 500px">
             <h4>Greetings ${addressee},</h4>
             <h4>Please find attached the invoice for your recent order.</h4>
-            <h4>Regards, <br />SDW DS SYSTEM LTD.</h4>
+            <h4>Regards, <br />SDW.</h4>
         </div>
         <div style="width: 500px; background-color: #16212f; color: white; text-align: center">
         ${getLatestAddressHTML()}
