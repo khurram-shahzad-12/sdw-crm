@@ -153,7 +153,6 @@ module.exports = {
     useCORS,
     LOG_LEVEL,
 
-    useAUTH0,
     CLAIM_NAME,
     READ_ZONES_CLAIM,
     WRITE_ZONES_CLAIM,
